@@ -98,5 +98,39 @@ int main()
   // } while (i <= n);
 
   // cout << sum;
+
+  // ? check if a number is prime or not
+  // int n = 11;
+  // bool isPrime = true;
+
+  // for (int i = 2; i * i <= n - 1; i++)
+  // {
+  //   if (n % i == 0) // non-prime
+  //   {
+  //     isPrime = false;
+  //     break;
+  //   }
+  // }
+
+  // if (isPrime == true)
+  // {
+  //   cout << "It is a prime number\n";
+  // }
+  // else
+  // {
+  //   cout << "It is not a prime number\n";
+  // }
+  // !Nested loop (loop inside loop)
+  //// print multiple stars in a single
+  int n=5;
+  for (int i = 1; i <= n; i++)
+  {
+    int a = 10;
+    for (int j = 1; j <= a; j++)
+    {
+      cout << "* ";
+    }
+    cout<<endl;
+  }
   return 0;
 }
