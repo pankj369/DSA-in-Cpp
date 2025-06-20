@@ -90,15 +90,15 @@ int main()
   //   cout << endl;
   // }
   // ?doing this same question using abcd pattern // but it is not reversed by me i need to see the solution or need to take help form gpt
-  // int n=4;
-  // for(int i=0; i<=n; i++){
-  //   char ch='A';
-  //   for(int j=i+1; j>0;j--){
-  //     cout<<ch;
-  //     ch++;
-  //   }
-  //   cout<<endl;
-  // }
+  int n=4;
+  for(int i=0; i<=n; i++){
+    char ch='A';
+    for(int j=i+1; j>0;j--){
+      cout<<ch;
+      ch++;
+    }
+    cout<<endl;
+  }
   // ?floyd's triangle pattern
   // int n=4, num=1;
   // for(int i=0; i<=n;i++){
@@ -164,44 +164,44 @@ int main()
   // }
 
   // ?Hollow diamond pattern
-  int n = 4;
-  for (int i = 0; i < n; i++)           // outer loop
-  {                                     // spaces
-    for (int j = 0; j < n - i - 1; j++) // inner loop for upper area
-    {
-      cout << " ";
-    }
-    cout << "*";
-    // inner spaces
-    if (i != 0)
-    {
-      for (int j = 0; j < 2 * i - 1; j++)
-      {
-        cout << " ";
-      }
-      cout << "*";
-    }
-    cout << endl;
-  }
-  // buttom area
-  for (int i = n - 2; i >= 0; i--)
-  {
-    // spaces
-    for (int j = 0; j < n - i - 1; j++)
-    {
-      cout << " ";
-    }
+  // int n = 4;
+  // for (int i = 0; i < n; i++)           // outer loop
+  // {                                     // spaces
+  //   for (int j = 0; j < n - i - 1; j++) // inner loop for upper area
+  //   {
+  //     cout << " ";
+  //   }
+  //   cout << "*";
+  //   // inner spaces
+  //   if (i != 0)
+  //   {
+  //     for (int j = 0; j < 2 * i - 1; j++)
+  //     {
+  //       cout << " ";
+  //     }
+  //     cout << "*";
+  //   }
+  //   cout << endl;
+  // }
+  // // buttom area
+  // for (int i = n - 2; i >= 0; i--)
+  // {
+  //   // spaces
+  //   for (int j = 0; j < n - i - 1; j++)
+  //   {
+  //     cout << " ";
+  //   }
 
-    cout << "*";
-    if (i != 0)
-    { // inner spaces
-      for (int j = 0; j < 2 * i - 1; j++)
-      {
-        cout << " ";
-      }
-      cout << "*";
-    }
-    cout << endl;
-  }
+  //   cout << "*";
+  //   if (i != 0)
+  //   { // inner spaces
+  //     for (int j = 0; j < 2 * i - 1; j++)
+  //     {
+  //       cout << " ";
+  //     }
+  //     cout << "*";
+  //   }
+  //   cout << endl;
+  // }
   return 0;
 }
