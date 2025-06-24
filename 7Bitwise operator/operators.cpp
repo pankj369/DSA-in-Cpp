@@ -23,26 +23,44 @@ using namespace std;
 
 // int main()
 // {
-//   // int n = 32;
-//   // int result = (n > 0) && ((n & (n - 1)) == 0);
-//   // cout << (result ? "yes, power of 2" : "no, not power of 2");
-//   int res=9 & 10;
-//   cout<<res<<endl;
+//   int n = 8;
+//   int result = (n > 0) && ((n & (n - 1)) == 0);
+//   cout << (result ? "yes, power of 2" : "no, not power of 2");
+//   // int res=9 ^ 10;
+//   cout<<result<<endl;
 //   return 0;
 // }
 
 // !waf to reverse an integer n
 
-int reversedNumber(int n){
-  int reversed=0;
-  while(n>0){
-    int digit=n%10; //get last digit
-    reversed= reversed*10+digit; //shift and add digit
-    n=n/10;
+int reversedNum(int num){
+  int  reversed=0; 
+  while(num>0){
+    int digit=num%10;
+    reversed=reversed*10+digit;
+    num/=10;
   }
   return reversed;
 }
 int main(){
-  int n=1234;
-  cout<<reversedNumber(n)<<endl;
+int num=234;
+cout<<reversedNum(num);
+return 0;
 }
+
+
+
+
+// int reversedNumber(int n){
+//   int reversed=0;
+//   while(n>0){
+//     int digit=n%10; //get last digit
+//     reversed= reversed*10+digit; //shift and add digit
+//     n=n/10;
+//   }
+//   return reversed;
+// }
+// int main(){
+//   int n=1234;
+//   cout<<reversedNumber(n)<<endl;
+// }
