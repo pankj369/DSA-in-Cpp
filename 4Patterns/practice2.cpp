@@ -139,17 +139,124 @@ using namespace std;
 // }
 
 // !pritn 1111\n _222\n_33
-int main(){
-  int n=3;
-  for(int i=1; i<=n; i++){
-    for(int j=0; j<i; j++){
-      cout<<" ";
+// int main(){
+//   int n=4;
+//   for(int i=0; i<n; i++){
+//     for(int j=0; j<i; j++){
+//       cout<<" ";
+//     }
+//       for(int j=0; j<n-i;j++){
+//         cout<<(i+1);
+//       }
+//       cout<<endl;
+//   }
+//   return 0;
+// }
+// !same with char AAAA\n_BBB\n__CCC\n___D
+// int main(){
+//   int n=4;
+//   for(int i=0; i<n; i++){
+//     for(int j=0; j<i; j++){
+//       cout<<" ";
+//     }     
+//     for(int j=0; j<n-i; j++){
+//         cout << (char)('A' + i);
+//     }
+//   cout << endl;
+//   }
+//   return 0;
+// }
 
-      for(int j=0; j<n-1;j++){
-        cout<<(i+1);
-      }
-      cout<<endl;
-    }
+
+// !   1
+// !  121
+// ! 12321
+// !1234321
+
+
+// int main(){
+//   int n=4; 
+//   for(int i=1; i<=n; i++){
+//     for(int j=1; j<=n-i; j++){
+//       cout<<" ";
+//     }
+  
+//     for(int j=1;j<=i; j++){
+//       cout<<j;
+//     }
+    
+//     for(int j=i-1;j>=1; j--){
+//       cout<<j;
+//     }
+//     cout<<endl;
+//   }
+//   return 0;
+// }
+
+// !print same using abcd
+// int main(){
+//   int n=4;
+//   for(int i=1;i<=n; i++){
+//     for(int j=1; j<=n-i; j++ ){
+//       cout<<" ";
+//     }
+//     char ch='A';
+//     for(int j=1; j<=i;j++){
+//       cout<<ch;
+//       ch++;
+//     }
+//     ch = ch - 2;
+//     for(int j=i-1; j>=1; j--){
+//       cout<<ch;
+//       ch--;
+//     }
+//     cout<<endl;
+//   }
+//   return 0;
+// }
+
+// !hollow pyramid pattern 
+
+// int main(){
+//   int n=4;
+//   for(int i=1; i<=n; i++){
+//     for(int j=1; j<=n-i; j++){
+//       cout<<" ";
+//      }
+     
+//      for(int j=1; j<=2*i-1;j++){
+//       if(j==1 ||j==2*i-1 ||i==n){
+//         cout<<"*";
+//       }else{
+//       cout<<" ";
+//      }
+//      }
+//     cout<<endl;
+//   }
+//   return 0;
+// }
+
+//! hollow diamond
+ // Upper half
+ int main(){
+  int n=4;
+for (int i = 1; i <= n; i++) {
+  for (int j = 1; j <= n - i; j++) cout << " ";       // print leading spaces
+  for (int j = 1; j <= 2 * i - 1; j++) {               // print star or space
+    if (j == 1 || j == 2 * i - 1) cout << "*";         // star at start and end
+    else cout << " ";                                  // space in between
   }
-  return 0;
+  cout << endl;
 }
+
+// Lower half
+for (int i = n - 1; i >= 1; i--) {
+  for (int j = 1; j <= n - i; j++) cout << " ";        // print leading spaces
+  for (int j = 1; j <= 2 * i - 1; j++) {
+    if (j == 1 || j == 2 * i - 1) cout << "*";
+    else cout << " ";
+  }
+  cout << endl;
+}
+return 0;
+ }
