@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <algorithm> //for swap
 using namespace std;
 
 // int main(){
@@ -102,7 +102,7 @@ using namespace std;
 
 // !Reverse an array
 
-int reverseArr(int arr[], int size)
+void reverseArr(int arr[], int size)
 {
   int start = 0;
   int end = size - 1;
