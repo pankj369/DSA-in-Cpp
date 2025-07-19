@@ -90,15 +90,15 @@ int main()
   //   cout << endl;
   // }
   // ?doing this same question using abcd pattern // but it is not reversed by me i need to see the solution or need to take help form gpt
-  int n=4;
-  for(int i=0; i<=n; i++){
-    char ch='A';
-    for(int j=i+1; j>0;j--){
-      cout<<ch;
-      ch++;
-    }
-    cout<<endl;
-  }
+  // int n=4;
+  // for(int i=0; i<=n; i++){
+  //   char ch='A';
+  //   for(int j=i+1; j>0;j--){
+  //     cout<<ch;
+  //     ch++;
+  //   }
+  //   cout<<endl;
+  // }
   // ?floyd's triangle pattern
   // int n=4, num=1;
   // for(int i=0; i<=n;i++){
@@ -203,5 +203,169 @@ int main()
   //   }
   //   cout << endl;
   // }
+/*
+  int n;
+  cin>>n;
+  int i=1;
+  while(i<=n){
+    int j=1;
+    while(j<=n){
+      cout<<'*';
+      j=j+1;
+    }
+    cout<<endl;
+    i=i+1;
+  }
+
+int n=5;
+int i=1; 
+while (i<=n){
+  int j=1; 
+  while(j<=n){
+    cout<<j;
+    // cout<<n-j+1;
+    j++;
+  }
+  cout<<endl;
+  i++;
+}
+
+int i=1; 
+int n=3;
+int count=1;
+while(i<=n){
+  int j=1;
+  while(j<=n){
+    cout<<count;
+    count+=1;
+    j+=1;
+  }
+  cout<<endl;
+  i++;
+}
+ 
+  int i=1; int n=5;
+  while(i<=n){
+    int j=1;
+    while(j<=i){
+      cout<<"*";
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+   
+      int i=1; int n=5;
+  while(i<=n){
+    int j=1;
+    while(j<=i){
+      cout<<i;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+     
+     
+      int i=1; int n=4;
+      int count=1;
+  while(i<=n){
+    int j=1;
+    while(j<=i){
+      cout<<count;
+      count+=1;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+
+        int i=1; int n=4;
+     
+  while(i<=n){
+    int j=1;
+    //  int count=i;
+    while(j<=i){
+      cout<<i-j+1;
+      // count++;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+   
+  int n=3;
+  int i=1; 
+  while(i<=n){
+    int j=1;
+         char ch= 'A'+i-1;
+    while(j<=n){
+
+     cout<<ch;
+     ch++;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+
+
+      int i=1; int n=3;
+      char ch='A'+i-1;
+  while(i<=n){
+    int j=1;
+    while(j<=n){
+      cout<<ch;
+      ch+=1;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+        int i=1; int n=3;
+    
+  while(i<=n){
+    int j=1;
+    while(j<=i){
+        char ch='A'+i-1;
+      cout<<ch;
+      ch++;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+       
+  int i=1; int n=4;
+    
+  while(i<=n){
+    int j=1;
+     char ch='A'+n-i;
+    while(j<=i){
+      cout<<ch;
+      ch++;
+      j++;
+    }
+    cout<<endl;
+    i++;
+  }
+
+int  i =1; int n=5;
+while(i<=n){
+  //print space
+  int space= n-i;
+  while(space){
+    cout<<" ";
+    space--;
+  }
+  int j=1;
+  while(j<=i){
+    cout<<"*";
+    j++;
+  }
+  cout<<endl;
+  i++;
+}
+*/
   return 0;
 }
