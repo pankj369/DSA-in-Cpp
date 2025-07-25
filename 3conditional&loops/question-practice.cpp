@@ -63,19 +63,129 @@ int main(){
   return 0;
 }
 */
+// !patterns again
 
+/*
+int main(){
+int n=5;
+for(int i=1; i<=n; i++){
+  for(int spaces=1; spaces<=2*(n-i); spaces++){
+    cout<<" ";
+  }
+  for(int k=i;k>=2; k--){
+    cout<<k<<" ";
+  }
+  for(int j=1; j<=i; j++){
+    cout<<j<<" ";
+  }
+  cout<<endl;
+}
+*/
+/*
 int main()
 {
-  int n=5;
-  for(int i=1; i<=n; i++){
-    for(int spaces=1; spaces<=n-i; spaces++){
-      cout<<" ";
+  int n = 5;
+  // upper
+  for (int i = 1; i < n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << "*";
     }
-    for(int j=1; j<=i; j++){
-      cout<<j<<" ";
+    for (int spaces = 1; spaces <= 2 * (n - i); spaces++)
+    {
+      cout << " ";
     }
-    cout<<endl;
+    for (int k = 1; k <= i; k++)
+    {
+      cout << "*";
+    }
+    cout << endl;
   }
+  // lower
+  for (int i = n; i >= 1; i--)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << "*";
+    }
+    for (int spaces = 1; spaces <= 2 * (n - i); spaces++)
+    {
+      cout << " ";
+    }
+    for (int k = 1; k <= i; k++)
+    {
+      cout << "*";
+    }
+    cout << endl;
+  }
+*/
+  /*
+  int main()
+  {
+    int n = 4;
+    for (int i = 1; i <= n; i++)
+    {
+      for (int spaces = 1; spaces <= n - i; spaces++)
+      {
+        cout << " ";
+      }
+      for (int j = i; j >= 1; j--)
+      {
+        cout << j;
+      }
+      for (int k = 2; k <= i; k++)
+      {
+        cout << k;
+      }
+      cout << endl;
+    }
+    // lower section
+    for (int i = n - 1; i >= 1; i--)
+    {
+      for (int spaces = 1; spaces <= n - i; spaces++)
+      {
+        cout << " ";
+      }
+      for (int j = i; j >= 1; j--)
+      {
+        cout << j;
+      }
+      for (int k = 2; k <= i; k++)
+      {
+        cout << k;
+      }
+      cout << endl;
+    }
+    */
+  /*
+  int nCr(int n, int r)
+  {
+    int res = 1;
+    if (r > n - r) r = n - r;
+    for (int i = 0; i < r; ++i)
+    {
+      res *= (n - i);
+      res /= (i + 1);
+    }
+    return res;
+  }
+  int main()
+  {
+    int n = 5;
+    for (int i = 0; i < n; i++)
+    {
+      for (int spaces = 0; spaces < n - i - 1; spaces++)
+      {
+        cout << " ";
+      }
+      for (int j = 0; j <= i; j++)
+      {
+        cout << nCr(i, j) << " ";
+      }
+      cout << endl;
+    }
+  */
   /*
   int n=5;
   //top half
@@ -111,37 +221,37 @@ int main()
   int n=5;
   for(int i =n; i>=1; i--){ //outer loop -controls the no. of rows
     for(int spaces=1; spaces<=n-i; spaces++){
-      cout<<" ";//print leading spacces to shift the triangle right 
+      cout<<" ";//print leading spacces to shift the triangle right
     }
     for(int j=1; j<=n; j++){ //inner loop controls wht to print in each row
       if(j==1|| j==i ||i==n){// print star at start, i-th position and full row if i==n
         cout<<"* ";
-      }else{ 
+      }else{
         cout<<"  ";//print space btwn stars here,  print two spaces for alignment
       }
     }
     cout<<endl;
   }
   */
-    /*
-  int n=5;
-  for(int i=1; i<=n; i++){
-    for(int spaces=1; spaces<=n-i; spaces++){
-      cout<<" ";
-    }
-    //print stars and internal spaces
-    for(int j=1; j<=i; j++){
-      if(j==1 || j==i || i==n){
-        cout<<"* ";
-      }else{
-        cout<<"  ";
-      }
-    }
-    cout<<endl;
-  }
-  */
   /*
-  int n=5; 
+int n=5;
+for(int i=1; i<=n; i++){
+  for(int spaces=1; spaces<=n-i; spaces++){
+    cout<<" ";
+  }
+  //print stars and internal spaces
+  for(int j=1; j<=i; j++){
+    if(j==1 || j==i || i==n){
+      cout<<"* ";
+    }else{
+      cout<<"  ";
+    }
+  }
+  cout<<endl;
+}
+*/
+  /*
+  int n=5;
   for(int i=1; i<=n; i++){
     for(int spaces=1; spaces<=i; spaces++ ){
       cout<<" ";
@@ -161,36 +271,36 @@ int main()
     cout<<endl;
   }
   */
-      /*
-  int n=5; 
-  for(int i=1; i<=n; i++){
-    for(int space=1; space<=i; space++){
-      cout<<" ";
-    }
-    for(int j=1; j<=n-i+1; j++){
-      cout<<"*";
-    }
-    for(int k=1; k<=n-i;k++){
-      cout<<"*";
-    }
-    cout<<endl;
+  /*
+int n=5;
+for(int i=1; i<=n; i++){
+for(int space=1; space<=i; space++){
+  cout<<" ";
+}
+for(int j=1; j<=n-i+1; j++){
+  cout<<"*";
+}
+for(int k=1; k<=n-i;k++){
+  cout<<"*";
+}
+cout<<endl;
+}
+*/
+  /*
+int n=5;
+for(int i=1; i<=n; i++){
+  for(int space=1; space<=n-i+1; space++){
+    cout<<" ";
   }
-    */
-    /*
-  int n=5;
-  for(int i=1; i<=n; i++){
-    for(int space=1; space<=n-i+1; space++){
-      cout<<" ";
-    }
-    for(int j=1; j<=i; j++){
-      cout<<"*";
-    }
-    for(int j2=1; j2<=i-1; j2++){
-      cout<<"*";
-    }
-    cout<<endl; 
+  for(int j=1; j<=i; j++){
+    cout<<"*";
   }
-    */
+  for(int j2=1; j2<=i-1; j2++){
+    cout<<"*";
+  }
+  cout<<endl;
+}
+  */
 
   /*
   int n=5;
@@ -204,30 +314,30 @@ int main()
     cout<<endl;
   }
     */
-/*
-  int n=5;
-  for(int i=1; i<=n; i++){
-  for(int j=1; j<=n-i+1; j++){
-    cout<<" ";
-  }
-    for(int j=1; j<=i; j++){
-      cout<<"*";
+  /*
+    int n=5;
+    for(int i=1; i<=n; i++){
+    for(int j=1; j<=n-i+1; j++){
+      cout<<" ";
     }
-    cout<<endl;
-  }
- */
-/*
-  int n = 5;
-  for (int i = 1; i <= 2 * n; i++) //row
-  {
-    int totslColsRow = i >= n ? 2 * n - i : i;
-    for (int j = 1; j <= totslColsRow; j++)//column
+      for(int j=1; j<=i; j++){
+        cout<<"*";
+      }
+      cout<<endl;
+    }
+   */
+  /*
+    int n = 5;
+    for (int i = 1; i <= 2 * n; i++) //row
     {
-      cout << "*";
+      int totslColsRow = i >= n ? 2 * n - i : i;
+      for (int j = 1; j <= totslColsRow; j++)//column
+      {
+        cout << "*";
+      }
+      cout << endl;
     }
-    cout << endl;
-  }
-*/
+  */
   /*
     for(int rows3=1; rows3<=5; rows3++){
       for(int columns3=1; columns3<=5-rows3+1;columns3++){
