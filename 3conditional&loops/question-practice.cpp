@@ -64,7 +64,36 @@ int main(){
 }
 */
 // !patterns again
-
+//! iska output error hai i mean decreasing loop is not working properly
+int main(){
+  int n=4;
+  int increase=1; 
+  int decrease=20;
+  for(int i=1; i<=n; i++){
+    for(int spaces=1; spaces<=i; spaces++){
+      cout<<"  ";
+    }
+    //print increasing number
+    for(int j=1; j<=n-i+1; j++){
+      cout<<increase++<<" "; 
+    }
+    //print decreasing number
+    for(int k=1; k<=n-i+1; k++ ){
+      cout<<decrease--<<" ";
+    }
+    cout<<endl;
+    }
+/*
+int main(){
+int n=6;
+for(int i=1; i<=n; i++){
+  for(int j=n-i+1; j>=1; j--){
+    cout<<i<<" ";
+}
+  cout<<endl;
+}
+*/
+/*
 int main(){
   int n=5; 
   for(int i=1; i<=n; i++){
@@ -75,6 +104,7 @@ int main(){
     }
     cout<<endl;
   }
+  */
  /*
 int main (){
   int n=5;
