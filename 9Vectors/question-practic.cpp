@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int main(){
+// int main(){
   /*
   vector<int> arr={23,34,52,12,7};
   int key;
@@ -55,6 +55,9 @@ int main(){
    }
    */
    //!write a program to count how many times a given elements occurs in the vector
+   //! input a vector and a key. PRint all indices where the key is found
+   /*
+   //both question solution in one 
    vector<int> arr; 
    int key, n;
    cout<<"Enter the size of the vector : ";
@@ -77,6 +80,40 @@ int main(){
     }
    }
    cout<<endl<<"key occured "<<count<<" times."<<endl;
-   //! input a vector and a key. PRint all indices where the key is found
+
   return 0;
 }
+     */
+  //!Write a function to reverse te vector
+  //function to reverse the vector
+  void reverseVector(vector<int> &arr){
+    int start=0;
+    int end=arr.size()-1;
+
+    while(start<end){
+      //swap elements
+      swap(arr[start], arr[end]);
+      start++;
+      end--;
+    }
+  }
+  //main function
+  int main(){
+    int n;
+    cout<<"Enter the size of the vector : ";
+    cin>>n; 
+    vector<int> arr(n);
+    cout<<"Enter "<<n<< " elements : ";
+    for(int i=0; i<n; i++){
+      cin>>arr[i];
+    }
+    //call the reversefunction
+    reverseVector(arr);
+    //print reverse array
+    cout<<"Reversed array : ";
+    for(int i=0; i<arr.size(); i++){
+      cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    return 0;
+  }

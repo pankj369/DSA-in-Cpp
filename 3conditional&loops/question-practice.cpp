@@ -63,8 +63,34 @@ int main(){
   return 0;
 }
 */
-// !patterns again
-//! iska output error hai i mean decreasing loop is not working properly
+//! concentric square number pattern 
+/*
+int main(){
+int n=5; 
+ int size=2*n-1;
+for(int i=1; i<=size; i++){
+  for(int j=1; j<=size; j++){
+    int minDist= min(min(i-1,j-1), min(size -i, size - j));
+    cout<<minDist<<" ";
+  }
+  cout<<endl;
+}
+  */
+ //!reverse  concentric square number
+ int main(){
+   int n = 5;
+    int size = 2 * n - 1;
+
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            int minDist = min(min(i, j), min(size - 1 - i, size - 1 - j));
+            cout << (n - minDist) << " ";
+        }
+        cout << endl;
+    }
+  
+/*//! iska output error hai i mean decreasing loop is not working properly
+
 int main(){
   int n=4;
   int increase=1; 
@@ -83,6 +109,7 @@ int main(){
     }
     cout<<endl;
     }
+  */
 /*
 int main(){
 int n=6;
