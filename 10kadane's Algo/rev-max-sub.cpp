@@ -4,6 +4,7 @@
 
 using namespace std;
 /*
+* time complexity for this in o (n3)
 int maxSubarraySumBruteForce(vector<int>& arr){
 int n=arr.size();
 int maxSum=INT_MIN;//initially set to lowest possible value;
@@ -80,6 +81,7 @@ int main(){
     return 0;
   }
     */
+   /*
 //! Maximum Subarray sum (subarray means contiguous part of a given array)
 int main(){
   int n=5;
@@ -95,4 +97,37 @@ int main(){
   }
   return 0;
 }
-//! brute force is the simplest approch to solve maximum subarray sum but it is not 
+*/
+//! brute force approch - is the simplest approch to solve maximum subarray sum but it is not more effecient to use in real-world project
+// * time complexity for this in o (n2)
+/*
+int main(){
+  int n=5;
+  int arr[5]={1,2,3,4,5};
+  int maxSum=INT_MIN;
+  for(int start=0; start<n; start++){ //start
+    int currentSum=0;
+    for(int end=start; end<n; end++){ //end
+      currentSum+=arr[end];
+      maxSum=max(currentSum, maxSum);
+    }
+  }
+  cout<<"Max Subarray Sum : "<<maxSum<<endl;
+  return 0;
+}
+*/
+// ! using kadane's algorithm - most efficient way to sovle max subarray sum 
+//! “At every index in the array, you decide whether to start a new subarray OR continue the previous one — whichever gives a larger sum.”
+// !If the current running sum (currentSum) becomes negative, discard it and start fresh from the current element.
+int main(){
+  int n=;
+  int arr[7]-{3, -4, 5, 4, -1, 7, -8};
+for(int i=0; i<n; i++){
+  currSum+=arr[i];
+  maxSum=max(maxSum[i], currSum[i]);
+  if(currSum<0){
+    currSum=0;
+  }
+}
+return 0;
+}
