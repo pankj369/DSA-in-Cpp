@@ -125,7 +125,6 @@ using namespace std;
 
 // !print a\ba\cba
 
-
 // int main() {
 //   int n = 4;
 //   for (int i = 0; i < n; i++) {
@@ -158,7 +157,7 @@ using namespace std;
 //   for(int i=0; i<n; i++){
 //     for(int j=0; j<i; j++){
 //       cout<<" ";
-//     }     
+//     }
 //     for(int j=0; j<n-i; j++){
 //         cout << (char)('A' + i);
 //     }
@@ -167,24 +166,22 @@ using namespace std;
 //   return 0;
 // }
 
-
 // !   1
 // !  121
 // ! 12321
 // !1234321
 
-
 // int main(){
-//   int n=4; 
+//   int n=4;
 //   for(int i=1; i<=n; i++){
 //     for(int j=1; j<=n-i; j++){
 //       cout<<" ";
 //     }
-  
+
 //     for(int j=1;j<=i; j++){
 //       cout<<j;
 //     }
-    
+
 //     for(int j=i-1;j>=1; j--){
 //       cout<<j;
 //     }
@@ -215,7 +212,7 @@ using namespace std;
 //   return 0;
 // }
 
-// !hollow pyramid pattern 
+// !hollow pyramid pattern
 
 // int main(){
 //   int n=4;
@@ -223,7 +220,7 @@ using namespace std;
 //     for(int j=1; j<=n-i; j++){
 //       cout<<" ";
 //      }
-     
+
 //      for(int j=1; j<=2*i-1;j++){
 //       if(j==1 ||j==2*i-1 ||i==n){
 //         cout<<"*";
@@ -237,6 +234,7 @@ using namespace std;
 // }
 
 //! hollow diamond
+/*
  // Upper half
  int main(){
   int n=4;
@@ -260,3 +258,26 @@ for (int i = n - 1; i >= 1; i--) {
 }
 return 0;
  }
+*/
+
+int main()
+{
+  int n = 10;
+  for (int i = 0; i < n; i++)
+  {
+    int row = i < n / 2 ? i : n - 1 - i; // mirror logic
+    for (int j = 0; j < n; j++)
+    {
+      if (j == 0 || j == n - 1 || j == row || j == n - 1 - row)
+      {
+        cout << "*";
+      }
+      else
+      {
+        cout << " ";
+      }
+    }
+    cout << endl;
+  }
+  return 0;
+}
