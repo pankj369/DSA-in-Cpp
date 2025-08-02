@@ -19,7 +19,7 @@ int main(){
 }*/
 
 // !Diamond pattern
-
+/*
 int main()
 {
   int n = 8;
@@ -57,6 +57,35 @@ int main()
     for (int j = 1; j <= (i * 2) - 1; j++)
     {
       cout << "*";
+    }
+    cout << endl;
+  }
+  return 0;
+}
+*/
+
+// ! void triangle
+
+int main()
+{
+  int n = 5;
+  for (int i = 1; i <= n; i++)
+  {
+    // spaces
+    for (int spaces = i; spaces <= n; spaces++)
+    {
+      cout << " ";
+    }
+    for (int j = 1; j <= (2 * i - 1); j++)
+    {
+      if (j == 1 || j == (2 * i - 1) || i == n)
+      {
+        cout << "*";
+      }
+      else
+      {
+        cout << " ";
+      }
     }
     cout << endl;
   }
