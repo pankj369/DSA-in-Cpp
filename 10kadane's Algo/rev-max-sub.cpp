@@ -135,7 +135,7 @@ int maxSubarraySum(vector<int>& arr)
 
 int main()
 {
-  vector<int> arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+  vector<int> arr = {5,4,-1,7,8};
 
   cout << maxSubarraySum(arr) << endl;
   return 0;
