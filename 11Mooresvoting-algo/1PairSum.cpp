@@ -27,7 +27,9 @@ int main(){
  return 0;
 }
 */
-// *optimise way to return pair in shorted array with target sum 
+// *optimise way to return pair in shorted array with target sum
+//
+// *two pointer approch
 // *linear time complexity
 /*
 vector<int> pairSum(vector<int> nums, int target)
@@ -66,3 +68,46 @@ int main()
 */
 // !Majority element using sort
 //! Majority element using Moore's voting algo-more optimise on leetcode
+
+int majorityElement(vector<int> &nums)
+{
+  // initialize values
+  int count = 0;
+  int candidates = 0;
+  // phase 1;
+  for (int num : nums)
+  {
+    if (count == 0)
+    {
+      candidates = num;
+    }
+    if (num == candidates)
+    {
+      count++;
+    }
+    else
+    {
+      count--;
+    }
+  }
+  // phase 2
+  count = 0;
+  for (int num : nums)
+  {
+    if (num == candidates)
+    {
+      count++;
+    }
+  }
+  if (count > nums.size() / 2)
+  {
+    return candidates;
+  }
+  return -1;
+}
+int main()
+{
+  vector<int> nums = {3, 3, 4, 2, 3, 3, 5, 3};
+
+  cout << majorityElement(nums) << endl;
+}
