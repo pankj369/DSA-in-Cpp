@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// !hollow cyslinder
+// !hollow cylinder
 /*
 int main(){
   int n=5;
@@ -16,7 +16,33 @@ int main(){
     cout<<endl;
   }
   return 0;
-}*/
+}
+*/
+// !italic shape cylinder
+int main()
+{
+  int n = 5;
+  for (int i = 1; i <= n; i++)
+  {
+    for (int spaces = n; spaces >= i; spaces--)
+    {
+      cout << " ";
+    }
+    for (int j = 1; j <= n; j++)
+    {
+      if (i == n || i == 1 || j == 1 || j == n)
+      {
+        cout << "*";
+      }
+      else
+      {
+        cout << " ";
+      }
+    }
+    cout << endl;
+  }
+  return 0;
+}
 
 // !Diamond pattern
 /*
@@ -94,6 +120,7 @@ int main()
 */
 
 // ! X shape
+/*
 int main(){
   int n=5;
   for(int i=1; i<=n; i++){
@@ -108,3 +135,4 @@ int main(){
   }
   return 0;
 }
+  */
