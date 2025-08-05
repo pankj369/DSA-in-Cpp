@@ -124,7 +124,7 @@ return 0;
 int maxSubarraySum(vector<int>& arr)
 {
   int currSum = arr[0];
-  int maxSum = arr[0];
+  int maxSum = INT_MIN;//we can initialise this as arr[0];
   for (int i = 1; i < arr.size(); i++)
   {
     currSum = max(arr[i], currSum + arr[i]);
@@ -137,6 +137,6 @@ int main()
 {
   vector<int> arr = {5,4,-1,7,8};
 
-  cout << maxSubarraySum(arr) << endl;
+  cout << "Maximum Subarray Sum : "<<maxSubarraySum(arr) << endl;
   return 0;
 }
