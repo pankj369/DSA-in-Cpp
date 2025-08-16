@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -58,5 +59,9 @@ int main(){
   }
   cout<<endl;
   
+    // !Reverse an string
+ string string2= "Pnkj from darbhanga";
+ reverse(string2.begin(), string2.end());
+ cout<<string2<<endl;
   return 0;
 }
