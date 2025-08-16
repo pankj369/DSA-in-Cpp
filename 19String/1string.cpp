@@ -48,5 +48,15 @@ int main(){
   string st;
   getline(cin, st);
   cout<<"Output: "<<st<<endl;
+
+
+
+  // ! Loops on a string
+  string string1="Pnkjfrom darbhanga";
+  for(char cha: string1){
+    cout<<cha<<" ";
+  }
+  cout<<endl;
+  
   return 0;
 }
