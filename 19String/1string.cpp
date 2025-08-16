@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -14,19 +14,39 @@ int main(){
 
   // !Input and output
 
-  char str[]="apna college";
+  // char str[]="apna college";
  
   // cout<<"Enter char array : ";
   // cin.getline(str, 100, '$');
     // cin.getline(str, 12);
 
   //hellow world $d from here(remove from here)
-   int len=0;
-    for(int i=0; i<str[i]!='\0'; i++){{
-      len++;
-    }
-    cout<<"length of strings : "<< len<<endl;
-  }
+  //  int len=0;
+  //   for(int i=0; i<str[i]!='\0'; i++){{
+  //     len++;
+  //   }
+  //   cout<<"length of strings : "<< len<<endl;
+  // }
 
+
+  // ! Strings in C++
+  // it is re-assignable
+  string str= "I am a billionaire";
+  cout<<str<<endl;
+  str= "hello";
+  cout<<str<<endl;
+  string str1= "I'm a Champion";
+  string str2= "I'm a Billionaire";
+  string str3 = str1 +"\n"+str2 ; //concatenation
+  cout<<str3<<endl;
+  // compare two string are equal or not
+  cout<<(str1==str2)<<endl; //0 as a result
+  // get the length of the string
+  cout<<str1.length()<<endl;
+  // how to get the full sentence using cin
+
+  string st;
+  getline(cin, st);
+  cout<<"Output: "<<st<<endl;
   return 0;
 }
