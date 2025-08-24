@@ -1,11 +1,19 @@
 #include <iostream>
-#include <math.h>
 #include <string>
 
 using namespace std;
 
+
+string isPrime(int n){
+  for(int i=2; i*i<=n; i++){
+    if(n%i==0){
+      return "Non Prime";
+    }
+  }
+  return "Prime";
+}
 int main(){
-char subj='M';
-  cout<<subj<<endl;
-  return 0;
+int n=13;
+cout<<isPrime(n)<<endl;
+return 0;
 }
