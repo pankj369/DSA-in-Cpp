@@ -14,6 +14,13 @@ int reverse(int n){
   }
   return revNum;
 }
+// !Checking number is palindrome or not
+
+bool isPalindrome(int n){
+  if(n<0) return false;
+  int revNum=reverse(n);
+  return n==revNum;
+}
 
 int main(){
   int n=567;
