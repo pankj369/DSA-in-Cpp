@@ -59,7 +59,7 @@ int main(){
     */
 
     // !practice questions
-
+/*
     int main(){
         int a=6, b=10;
         cout<<"Bitwise AND = "<<(a & b)<<endl;
@@ -69,3 +69,23 @@ int main(){
         cout<<"Left Shift = "<<(10<< 2)<<endl;
         cout<<"Right Shift = "<<(10 >>1)<<endl;
     }
+*/
+
+//!write a function to reverse a number
+int reversedNum(int n){
+    int ans=0;
+    while(n>0){
+    int lastdigit= n%10; //get last digit
+    n/=10; //remove last digit
+    ans= ans*10 + lastdigit; // add it to reversed
+    }
+    return ans;
+}
+
+int main(){
+    int n;
+    cout<<"Enter the number: ";
+    cin>>n;
+    cout<<"The reversed number is: "<<reversedNum(n);
+    return 0;
+}
