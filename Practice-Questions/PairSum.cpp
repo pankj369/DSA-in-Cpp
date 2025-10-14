@@ -65,4 +65,36 @@ int main(){
 
 */
 
+// !  Majority element using shorting
 
+#include <algorithm>
+int majorityElement(vector<int> &arr)
+{
+    int n = arr.size();
+    // sort
+    sort(arr.begin(), arr.end());
+
+    // freq count
+    int freq = 1, ans = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] == arr[i - 1])
+        {
+            freq++;
+        }
+        else
+        {
+            freq = 1;
+            ans = arr[i];
+        }
+        if (freq > n / 2)
+            return ans;
+    }
+    return -1;
+}
+int main()
+{
+    vector<int> arr = {1, 1, 1, 14, 1, 1, 2, 5, 3};
+    cout << majorityElement(arr);
+    return 0;
+}
