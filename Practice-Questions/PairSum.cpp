@@ -56,6 +56,7 @@ int majorityElement(vector<int>& arr){
             return {val};
         }
     }
+    return -1; //for no majority
 }
 int main(){
     vector <int> arr={1,1,3,1,1,1,4,3,4,1,5};
@@ -64,6 +65,28 @@ int main(){
 }
 
 */
+//! Majority Element using hash- map (unordered map)
+#include <unordered_map>
+int majorElem_hashmap(vector<int> &arr1)
+{
+    unordered_map<int, int> freq; // key=element and value=frequency
+    // step1 - count frequency
+    for (int num : arr1)
+    {
+        freq[num]++;
+    }
+    // step2- finding element having frequency > n/2
+    int s = arr1.size();
+    for (auto pair : freq)
+    // we write auto instead of  pair<const int, int> this beacause this is a bit long and hard to write every time
+    {
+        if (pair.second > s / 2)
+        {
+            return pair.first;
+        }
+    }
+    return -1;
+}
 
 // !  Majority element using shorting
 
@@ -96,5 +119,7 @@ int main()
 {
     vector<int> arr = {1, 1, 1, 14, 1, 1, 2, 5, 3};
     cout << majorityElement(arr);
+    vector<int> arr1 = {1, 1, 1, 14, 1, 1, 2, 5, 3};
+    cout << "Majority element using hash Map : " << majorElem_hashmap(arr1);
     return 0;
 }
