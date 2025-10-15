@@ -115,11 +115,40 @@ int majorityElement(vector<int> &arr)
     }
     return -1;
 }
+
+// we can also find out the majority element using sorting
+int majorElem_shorting(vector<int> &arr2)
+{
+    int s1 = arr2.size();
+    sort(arr2.begin(), arr2.end());
+    int n_of_num = arr2[s1 / 2]; // finding middile elem after sorting
+
+    int count = 0;
+    for (int val : arr2)
+    {
+        if (val == n_of_num)
+        {
+            count++;
+        }
+    }
+
+    if (count > s1 / 2)
+    {
+        return n_of_num;
+    }
+    else
+    {
+        return -1;
+    }
+}
 int main()
 {
     vector<int> arr = {1, 1, 1, 14, 1, 1, 2, 5, 3};
-    cout << majorityElement(arr);
+    // cout << majorityElement(arr);
     vector<int> arr1 = {1, 1, 1, 14, 1, 1, 2, 5, 3};
     cout << "Majority element using hash Map : " << majorElem_hashmap(arr1);
+    vector<int> arr2 = {1, 1, 1, 14, 1, 1, 2, 5, 3};
+    cout << "\nMajority elem using sorting : " << majorElem_shorting(arr2);
+
     return 0;
 }
