@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <string>
+#include <algorithm> //required for reverse()
 using namespace std;
 
 int main()
@@ -26,5 +26,19 @@ int main()
     string s2 = "Pankj";
     string s3 = s1 + " " + s2;
     cout << s3 << endl;
+
+    //?Sting questions
+    //! run a loop on an user's input
+
+    string str2="Enter whatever you want";
+
+    for(char text : str2){
+        cout<<text<<" ";
+    }
+
+    //! reverse an string using reverse function
+    string str3="Enter whatever you want";
+    reverse(str3.begin(), str3.end());
+    cout<<"\nReverse an string : "<<str3;
     return 0;
 }
