@@ -21,7 +21,7 @@ int main()
     cout << "using cin.getline : " << name1 << endl;
 
 
-
+// using string classes - this is the easier and safest than character array also automatically manages
     string s1 = "Hello";
     string s2 = "Pankj";
     string s3 = s1 + " " + s2;
