@@ -38,9 +38,26 @@ bool palindrome(string str)
     return true;
 }
 
+// !Remove all occurences form a string
+string removeAllOccurences(string str1, string part)
+{
+    while (str1.length() > 0 && str1.find(part) < str1.length())
+    {
+        str1.erase(str1.find(part), part.length());
+    }
+    return str1;
+}
 int main()
 {
     string str = "madam";
     cout << (palindrome(str) ? "It is a Palindrome." : "It's not a Palindrome.");
+
+    cout << endl;
+
+    // removing occurances
+    string str1 = "ramashyamamkhtam";
+    string part = "am";
+    cout << removeAllOccurences(str1, part);
+
     return 0;
 }
