@@ -7,14 +7,15 @@ using namespace std;
 
 bool isAlphaNum(char ch)
 {
-    if (ch >= '0' && ch <= '9')
-    {
-        (tolower(ch) >= 'a' && tolower(ch) <= 'z');
-    }
+    if ((ch >= '0' && ch <= '9') ||
+        (tolower(ch) >= 'a' && tolower(ch) <= 'z'))
+        return true;
+    return false;
 }
 
 bool palindrome(string str)
 {
+    // st for beginning and end for end character
     int st = 0, end = str.size() - 1;
 
     while (st < end)
@@ -24,7 +25,7 @@ bool palindrome(string str)
             st++;
             continue;
         }
-        if (isAlphaNum(!str[end]))
+        if (!isAlphaNum(str[end]))
         {
             end--;
             continue;
@@ -41,7 +42,7 @@ bool palindrome(string str)
 // !Remove all occurences form a string
 string removeAllOccurences(string str1, string part)
 {
-    while (str1.length() > 0 && str1.find(part) < str1.length())
+    while (str1.length() > 0 && str 1.find(part) < str1.length())
     {
         str1.erase(str1.find(part), part.length());
     }
