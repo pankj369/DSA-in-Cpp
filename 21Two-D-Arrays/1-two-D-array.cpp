@@ -48,17 +48,48 @@ int getmaxSum2(int matrix[][3], int rows, int cols)
     }
     return maxColsSum;
 }
+// ?Diagonal sum
+
+int diagonalSum(int matrix[][4], int n)
+{
+    int sum = 0;
+    //primary diagonal = j==i;
+    //secondary diagonal =  j=n-i-1
+    for (int i = 0; i < n; i++)
+    {
+        sum+=matrix[i][i]; //optimise approch
+        if(i != n-i-1){
+            sum+=matrix[i][n-i-1];
+        }
+        // for (int j = 0; j < n; j++)
+        // {
+        //     if (i == j)
+        //     {
+        //         sum += matrix[i][j];
+        //     }
+        //     else if (j == n - 1 - i)
+        //     {
+        //         sum += matrix[i][j];
+        //     }
+        // }
+    }
+    return sum;
+}
 int main()
 {
-    int matrix[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}};
+    int matrix[4][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12},
+        {13, 14, 15, 16}};
 
-    int rows = 3, cols = 3, key = 9;
+    int n = 4;
+    cout << diagonalSum(matrix, n) << endl;
 
-    cout << getmaxSum2(matrix, rows, cols) << endl;
-    cout << getMaxSum(matrix, rows, cols) << endl;
+    // int rows = 3, cols = 3, key = 9;
+
+    // cout << getmaxSum2(matrix, rows, cols) << endl;
+    // cout << getMaxSum(matrix, rows, cols) << endl;
     // pair<int, int> pos = searchMatrix(matrix, rows, cols, key);
 
     // if (pos.first != -1)
