@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-bool searchMatrix(int matrix[][3], int rows, int cols, int key) {
+pair<int, int> searchMatrix(int matrix[][3], int rows, int cols, int key) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             if (matrix[i][j] == key) {
-                return true; // key found
+                return {i, j}; // return pair of indices
             }
         }
     }
-    return false; // key not found
+    return {-1, -1}; // if not found
 }
 
 int main() {
@@ -20,14 +20,13 @@ int main() {
         {10, 11, 12}
     };
 
-    int rows = 4;
-    int cols = 3;
-    int key = 8;
+    int rows = 4, cols = 3, key = 9;
+    pair<int, int> pos = searchMatrix(matrix, rows, cols, key);
 
-    if (searchMatrix(matrix, rows, cols, key))
-        cout << "Key found!" << endl;
+    if (pos.first != -1)
+        cout << "Key found at position: (" << pos.first << ", " << pos.second << ")" << endl;
     else
         cout << "Key not found!" << endl;
 
     return 0;
-  }
+}
