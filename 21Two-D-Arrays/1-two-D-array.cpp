@@ -1,8 +1,9 @@
 #include <iostream>
 #include <climits>
+#include <vector>
 
 using namespace std;
-// ? linear search in 2d array
+// ! linear search in 2d array
 pair<int, int> searchMatrix(int matrix[][3], int rows, int cols, int key)
 {
     for (int i = 0; i < rows; i++)
@@ -18,7 +19,7 @@ pair<int, int> searchMatrix(int matrix[][3], int rows, int cols, int key)
     return {-1, -1}; // if not found
 }
 
-// ? maximum row sum
+// ! maximum row sum
 int getMaxSum(int matrix[][3], int rows, int cols)
 {
     int maxRowSum = INT8_MIN;
@@ -33,7 +34,7 @@ int getMaxSum(int matrix[][3], int rows, int cols)
     }
     return maxRowSum;
 }
-//? maximum colums sum
+//! maximum colums sum
 int getmaxSum2(int matrix[][3], int rows, int cols)
 {
     int maxColsSum = INT_MIN;
@@ -48,18 +49,19 @@ int getmaxSum2(int matrix[][3], int rows, int cols)
     }
     return maxColsSum;
 }
-// ?Diagonal sum
+// !Diagonal sum
 
 int diagonalSum(int matrix[][4], int n)
 {
     int sum = 0;
-    //primary diagonal = j==i;
-    //secondary diagonal =  j=n-i-1
+    // primary diagonal = j==i;
+    // secondary diagonal =  j=n-i-1
     for (int i = 0; i < n; i++)
     {
-        sum+=matrix[i][i]; //optimise approch
-        if(i != n-i-1){
-            sum+=matrix[i][n-i-1];
+        sum += matrix[i][i]; // optimise approch
+        if (i != n - i - 1)
+        {
+            sum += matrix[i][n - i - 1];
         }
         // for (int j = 0; j < n; j++)
         // {
@@ -75,16 +77,28 @@ int diagonalSum(int matrix[][4], int n)
     }
     return sum;
 }
+
+// ! 2D vectors
+
 int main()
 {
-    int matrix[4][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-        {13, 14, 15, 16}};
+    vector<vector<int>> matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    for (int i = 0; i < matrix1.size(); i++)
+    {
+        for (int j = 0; j < matrix1[i].size(); j++)
+        {
+            cout << matrix1[i][j] << " ";
+        }
+        cout << endl;
+    }
+    // int matrix[4][4] = {
+    //     {1, 2, 3, 4},
+    //     {5, 6, 7, 8},
+    //     {9, 10, 11, 12},
+    //     {13, 14, 15, 16}};
 
-    int n = 4;
-    cout << diagonalSum(matrix, n) << endl;
+    // int n = 4;
+    // cout << diagonalSum(matrix, n) << endl;
 
     // int rows = 3, cols = 3, key = 9;
 
