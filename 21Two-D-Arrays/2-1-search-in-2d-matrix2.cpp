@@ -5,9 +5,12 @@ using namespace std;
 
 bool searchMatrix(vector<vector<int>> &mat, int target)
 {
-    int m = mat.size(), n = mat[0].size();
+    int m = mat.size(); //number of rows
+    int n = mat[0].size(); // number of cols in each rows
 
-    int r = 0, c = n - 1;
+    // start from the **top-right corner ** of the matrix
+    int r = 0; // row index start form 0 (first row)
+    int c = n - 1; // cols index strarts form last column (top right positioon)
     while (r < m && c >= 0)
     {
         if (target == mat[r][c])
